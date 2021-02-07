@@ -35,7 +35,7 @@ header{
 }
 
 header img{
-    width: 250px;
+    width: 500px;
     margin-right: 10px;
 }
 
@@ -89,6 +89,6 @@ footer{
 }
 
 .recipe img{
-    width:100px;
-    margin: -30px auto 20px;
+    width:200px;
+    margin: -40px auto 20px;
 }
