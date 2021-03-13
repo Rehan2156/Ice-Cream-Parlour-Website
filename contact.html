@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     </head>
 <body>
     <nav>
@@ -15,15 +16,55 @@
             <li><a href="contact.html" class="btn">Contact Us</a></li>
           </ul>
       </nav>
-    <form>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
         <h2>Drop your query!</h2>
         <label for="email">Email</label>
         <input type="text" name="email"  />
-        <div class="email error"></div>
+        <div id="emailerror" class="email error"></div>
+        <label for="contact">Contact Number</label>
+        <input type="text" name="contact"  />
+        <div id="contacterror" class="contact error"></div>
         <label for="text">Message</label>
         <textarea type="text" name="message" rows="4" cols="50" ></textarea>
-        <div class="message error"></div>
+        <div id="msgerror" class="message error"></div>
         <button>send</button>
+        <div id="success" class="success"></div>
       </form>
 </body>
+<script>
+  function validateForm() {
+    var status = true;
+  var x = document.forms["myForm"]["message"].value;
+  if (x == "") {
+    document.getElementById("msgerror").innerHTML = "Message cannot be empty";
+    // return false;
+    status = false;
+  }
+  var cont = document.forms["myForm"]["contact"].value;
+  if(cont.length!=10){
+    document.getElementById("contacterror").innerHTML = "Contact number has to be 10 digits";
+    status = false;
+  }
+
+  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.email.value))
+  {
+    // return (true)
+  }
+  else{
+  document.getElementById("emailerror").innerHTML = "You have entered an invalid email address!";
+    status = false;
+}
+  if(status == false)
+  return false;
+
+  document.getElementById("msgerror").innerHTML =""
+  document.getElementById("contacterror").innerHTML=""
+  document.getElementById("emailerror").innerHTML=""
+
+  document.getElementById("success").innerHTML="Form submitted successfully"
+
+  return false;  
+}
+
+</script>
 </html>

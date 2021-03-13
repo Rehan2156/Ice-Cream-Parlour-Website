@@ -4,17 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stick</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav>
-    <div class="logo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
         <img src="logo.png" alt="">
         <h1><a href="index.html">Two-Scoops Ice Cream</a></h1>
-    </div>  
-      <ul>
-        <li><a href="contact.html" class="btn">Contact Us</a></li>
-      </ul>
-  </nav>
+      </div>  
+        <ul>
+          <li><div class="notification"><span class="fa fa-cart-plus" style="font-size:48px;"></span><span class="badge">0</span></div></li>
+          <li><a href="contact.html" class="btn">Contact Us</a></li>
+        </ul>
+    </nav>
 
   <ul class="sidenav">
     <li class="sideHead">
@@ -53,7 +55,7 @@
           <p>Premium rich vanilla ice cream coated with rich milk chocolate. The ultimate classic. There’s some who prefer the good ol’ fashioned Chocolate and Vanilla ice cream stick.</p>
           <div>
           <h4>Rs 60</h4>
-          <a class="btn">Add to cart</a>
+          <a class="btn cart">Add to cart</a>
           </div>
         </li>
         <li class="recipe">
@@ -62,7 +64,7 @@
           <p>Premium Mango ice candy coated with Mango flavoured white chocolate. All the mango you could want wrapped wonderfully into this delightful ice cream stick!</p>
           <div>
             <h4>Rs 60</h4>
-            <a class="btn">Add to cart</a>
+            <a class="btn cart">Add to cart</a>
             </div>
         </li>
         <li class="recipe">
@@ -71,11 +73,12 @@
           <p>Creamy Chocolate ice cream with crumbled cookies, coated in rich dark chocolate.</p>
           <div>
             <h4>Rs 80</h4>
-            <a class="btn">Add to cart</a>
+            <a class="btn cart">Add to cart</a>
           </div>
         </li>
       </ul>
 
       <footer>Copyright 2021 Two-Scoops Ice Cream by Rehan Shaikh</footer>
+      <script src="js/addCart.js"></script>
 </body>
 </html>
